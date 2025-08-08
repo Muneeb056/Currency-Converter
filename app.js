@@ -36,7 +36,6 @@ const updateFlag = (element) => {
 const updateExchangeRate = async () => {
     let amount = document.querySelector(".amount input");
     let amtVal = amount.value;
-    // console.log(amtVal);
     if (amtVal === "" || amtVal <= 0) {
         amtVal = 1;
         amount.value = "1";
@@ -49,7 +48,6 @@ const updateExchangeRate = async () => {
     if (finalAmount < 1) {
         msg.innerText = `${amtVal}${fromCurr.value} = ${finalAmount.toPrecision(2)}${toCurr.value}`;
     } else {
-        // msg.innerText = `${amtVal} ${fromCurr.value} = ${Math.round(finalAmount.toLocaleString())} ${toCurr.value}`;
         msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount.toLocaleString()} ${toCurr.value}`;
     }
 }
